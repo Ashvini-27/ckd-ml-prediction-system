@@ -1,0 +1,3 @@
+Experiment,Accuracy,Recall,F1
+All 24 Features,0.9975,0.996,0.998
+Reduced 14 Features,0.8875,0.872,0.9064

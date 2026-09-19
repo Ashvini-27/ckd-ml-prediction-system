@@ -1,0 +1,11 @@
+Feature Removed,Accuracy
+sg,0.98
+hemo,0.9825
+pcv,0.9875
+al,0.99
+htn,0.99
+rbcc,0.9925
+sc,0.9925
+pe,0.9925
+dm,0.995
+ane,0.9975

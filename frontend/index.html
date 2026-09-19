@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CKD Prediction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>CKD Prediction System</h1>
+            <p>Machine Learning Based Chronic Kidney Disease Prediction</p>
+        </header>
+
+
+        <form id="predictionForm">
+
+            <!-- BASIC INFORMATION -->
+
+            <section>
+                <h2>Basic Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Age</label>
+                        <input type="number" id="age" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Blood Pressure</label>
+                        <input type="number" id="bp" required>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- LABORATORY VALUES -->
+
+            <section>
+                <h2>Laboratory Measurements</h2>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Specific Gravity</label>
+                        <input type="number" step="0.001" id="sg" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Albumin</label>
+                        <input type="number" id="al" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Sugar</label>
+                        <input type="number" id="su" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Blood Glucose</label>
+                        <input type="number" id="bgr" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Blood Urea</label>
+                        <input type="number" id="bu" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Serum Creatinine</label>
+                        <input type="number" step="0.1" id="sc" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Sodium</label>
+                        <input type="number" id="sod" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Potassium</label>
+                        <input type="number" step="0.1" id="pot" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Hemoglobin</label>
+                        <input type="number" step="0.1" id="hemo" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Packed Cell Volume</label>
+                        <input type="number" id="pcv" required>
+                    </div>
+
+                    <div class="field">
+                        <label>White Blood Cell Count</label>
+                        <input type="number" id="wbcc" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Red Blood Cell Count</label>
+                        <input type="number" step="0.1" id="rbcc" required>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- CLINICAL INFORMATION -->
+
+            <section>
+                <h2>Clinical Indicators</h2>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Red Blood Cells</label>
+                        <select id="rbc" required>
+                            <option value="">Select</option>
+                            <option value="normal">Normal</option>
+                            <option value="abnormal">Abnormal</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Pus Cell</label>
+                        <select id="pc" required>
+                            <option value="">Select</option>
+                            <option value="normal">Normal</option>
+                            <option value="abnormal">Abnormal</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Pus Cell Clumps</label>
+                        <select id="pcc" required>
+                            <option value="">Select</option>
+                            <option value="present">Present</option>
+                            <option value="notpresent">Not Present</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Bacteria</label>
+                        <select id="ba" required>
+                            <option value="">Select</option>
+                            <option value="present">Present</option>
+                            <option value="notpresent">Not Present</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Hypertension</label>
+                        <select id="htn" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Diabetes Mellitus</label>
+                        <select id="dm" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Coronary Artery Disease</label>
+                        <select id="cad" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Appetite</label>
+                        <select id="appet" required>
+                            <option value="">Select</option>
+                            <option value="good">Good</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Pedal Edema</label>
+                        <select id="pe" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Anemia</label>
+                        <select id="ane" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <button type="submit">
+                Predict CKD
+            </button>
+
+        </form>
+
+
+        <!-- RESULT -->
+
+        <div id="result" class="result hidden">
+
+            <h2>Prediction Result</h2>
+
+            <div id="prediction"></div>
+
+            <p>
+                Model Probability:
+                <strong id="probability"></strong>
+            </p>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
